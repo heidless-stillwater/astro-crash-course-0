@@ -1,0 +1,25 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+// const num = 1
+const num = ["bob", "jo"]
+
+---
+
+<body>
+	<h3>num test: {num}</h3>
+	{
+		num.map((arrayItem) => (
+			<p>{arrayItem}</p>
+		))
+	}
+</body>
+
+
+
+<!-- <Layout>
+	<Welcome />
+</Layout> -->
+
+
