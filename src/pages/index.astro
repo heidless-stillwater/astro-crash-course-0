@@ -1,25 +1,16 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.jsx';
+import MainLayout from '../layouts/MainLayout.astro';
 
 // const num = 1
 const num = ["bob", "jo"]
-
 ---
 
-<body>
-	<h3>num test: {num}</h3>
-	{
-		num.map((arrayItem) => (
-			<p>{arrayItem}</p>
-		))
-	}
-</body>
+<MainLayout title="Home">
+	<p id="copyright" class="text-3xl bg-blue-500 text-white"></p>
+	<Button client:load/>
+</MainLayout>
 
-
-
-<!-- <Layout>
-	<Welcome />
-</Layout> -->
-
-
+<script>
+	import "../js/utils.js";
+</script>
